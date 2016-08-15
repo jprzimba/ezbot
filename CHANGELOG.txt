@@ -1,0 +1,104 @@
+                                     BBBBBBBBBBBBBBBBB                             tttt          
+                                     B::::::::::::::::B                         ttt:::t          
+                                     B::::::BBBBBB:::::B                        t:::::t          
+                                     BB:::::B     B:::::B                       t:::::t          
+    eeeeeeeeeeee    zzzzzzzzzzzzzzzzz  B::::B     B:::::B   ooooooooooo   ttttttt:::::ttttttt    
+  ee::::::::::::ee  z:::::::::::::::z  B::::B     B:::::B oo:::::::::::oo t:::::::::::::::::t    
+ e::::::eeeee:::::eez::::::::::::::z   B::::BBBBBB:::::B o:::::::::::::::ot:::::::::::::::::t    
+e::::::e     e:::::ezzzzzzzz::::::z    B:::::::::::::BB  o:::::ooooo:::::otttttt:::::::tttttt    
+e:::::::eeeee::::::e      z::::::z     B::::BBBBBB:::::B o::::o     o::::o      t:::::t          
+e:::::::::::::::::e      z::::::z      B::::B     B:::::Bo::::o     o::::o      t:::::t          
+e::::::eeeeeeeeeee      z::::::z       B::::B     B:::::Bo::::o     o::::o      t:::::t          
+e:::::::e              z::::::z        B::::B     B:::::Bo::::o     o::::o      t:::::t    tttttt
+e::::::::e            z::::::zzzzzzzzBB:::::BBBBBB::::::Bo:::::ooooo:::::o      t::::::tttt:::::t
+ e::::::::eeeeeeee   z::::::::::::::zB:::::::::::::::::B o:::::::::::::::o      tt::::::::::::::t
+  ee:::::::::::::e  z:::::::::::::::zB::::::::::::::::B   oo:::::::::::oo         tt:::::::::::tt
+    eeeeeeeeeeeeee  zzzzzzzzzzzzzzzzzBBBBBBBBBBBBBBBBB      ooooooooooo             ttttttttttt  
+                                                                                                 
+
+v2.0
+* Add support for lol 6.16.
+* Changed configs values... (INTRO_BOT to BOT_INTO, BEGINNER_BOT to BOT_BEGINNER, MEDIUM_BOT to BOT_MEDIUM).
+* Changed Headers on settings file to uppercase i.e (General to GENERAL).
+* Fixed ARAM spells selector.
+* Add Kled champion.
+
+v1.2.8
+* Support for LoL 6.12.
+* Fixed an issue while starting League of Legends via LoLLauncher.exe.
+* Fixed selecting spells at ARAM game. (Not tested) 
+
+v1.2.6
+* Support for LOL 6.10.
+* Fix Handshake error. 3 Weeks testing nes code and working like a charm.
+* Fixed Login new account issue.
+* Remove AcceptTrade. It's bugging some games.
+* Add random champion select (random from list of champion in settings, and can get a random champion if someone pick your champion first...).
+* Implemented https://github.com/tryller/ezbot/issues/15
+* Implemented delay to multi acocunts voit to enter in same queue.(But it can...) Issue https://github.com/tryller/ezbot/issues/14
+
+v1.2.5
+* Move Region to acocunts file. (New struct ACCOUNT|PASSWORD|REGION|QUEUE_TYPE)
+* Add support to URF, ASCENSION, SR_HEXAKILL and TT_HEXAKILL.
+* Moved lol verison to configs/version.txt
+
+v1.2.4
+* Add support to LOL 6.8.
+* Created Git Issue Tracking.
+* It is not necessary but the use of .bat file
+
+v1.2.3
+* Add compatibility with LOL 6.6.
+* Add support to champion AURELIONSOL.
+* Some small work on connection code (maybe fix error with some people). 
+* More verification on killing League of Legends process.
+* Add League of Legends config size if you enable ReplaceGameConfig.
+* Rework champion select again first champion may check RAMDOM and second champion.
+* Add an option to accept trade if requester have my hero.
+
+v1.2.2
+* Fixed champion select error.
+* Rework connection code, maybe it fix issue with VPS (need to be tested).
+* Fixed replace game config.
+
+v1.2.1
+* Add auto update chack.
+* Rework all code of EndOfGameState.
+* Add ezBot.bat file... Now you ALWAYS open ezBot with or game not close at the end..
+* Add Reconnect option.
+* Add version 6.5 of League of Legends.
+* Rework second champion pick code (Need to be tested).
+                                                                                     
+v1.2.0
+* Add logs and error logs.
+* Remove random pick, now it try first pick if can't pick... go second.
+* Add buy experience boost again.
+* Add current IP information.
+* Add support to BOT_3x3 (TT Map).
+* Add JP server support, thanks to kelitz to give me necessary values.
+
+v1.1.2
+* Updated for 6.4.
+* Add secundary champion to pick.
+* Add support to champions Bard, Ekko, Illaoi, Jhin, Kindred and TahmKench.
+* Remove buy boost (not working properlly).
+
+v1.1.1
+* Remove launcher.
+* Fixed NA error.
+
+v1.1.0
+* Fixed champion select error.
+
+v1.0.0
+* Auto join/accept queue.
+* Wait for leave buster.
+* You can easy change lol version at config file.
+* Launcher for rename app at first time.
+* Configuration to max bot that you wnat.
+* Max level for botting configurable
+* Replace game config.
+* Auto buy boost.
+* Random spells at achampion select or not.
+* Regions are NA, EUW, EUNE, LAN, LAS, OCE, TR, BR, RU and KR
+* Queue types are INTRO_BOT, BEGGINER_BOT, MEDIUM_BOT, NORMAL_3x3, NORMAL_5x5 and ARAM

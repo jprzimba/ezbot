@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7EB79FB-7DB8-4172-BF2C-706602C228FF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ezBot</RootNamespace>
+    <AssemblyName>ezBot</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PvPNetClient\RiotObjects\Trade\TradeContractDTO.cs" />
+    <Compile Include="PvPNetClient\RTMP\Error.cs" />
+    <Compile Include="Utils\Enums.cs" />
+    <Compile Include="Utils\IniFile.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Messaging\SimpleDialogMessageResponse.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PvPNetClient\Assets\AsyncHelpers.cs" />
+    <Compile Include="PvPNetClient\Assets\StringEnums.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Kudos\Dto\PendingKudosDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Leagues\Pojo\LeagueItemDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Leagues\Pojo\LeagueListDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Leagues\Pojo\MiniSeriesDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Account\AccountSummary.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Broadcast\BroadcastNotification.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Catalog\Champion\ChampionDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Catalog\Champion\ChampionSkinDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Catalog\Effect.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Catalog\Icon\Icon.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Catalog\ItemEffect.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Catalog\Rune\Rune.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Catalog\Rune\RuneType.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Clientfacade\Domain\LoginDataPacket.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Gameinvite\Contract\LobbyStatus.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\BannedChampion.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\BotParticipant.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\ChampionBanInfoDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\GameDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\GameObserver.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\GameTypeConfigDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\Map\GameMap.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\Message\GameNotification.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\ObfruscatedParticipant.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\Participant.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\PlatformGameLifecycleDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\PlayerChampionSelectionDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\PlayerCredentialsDto.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\PlayerParticipant.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\PracticeGameConfig.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\Practice\PracticeGameSearchResult.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Game\StartChampSelectDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Harassment\LcdsResponseString.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Leagues\Client\Dto\SummonerLeagueItemsDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Leagues\Client\Dto\SummonerLeaguesDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Login\AuthenticationCredentials.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Login\Session.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Matchmaking\GameQueueConfig.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Matchmaking\MatchingThrottleConfig.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Matchmaking\MatchMakerParams.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Matchmaking\QueueDodger.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Matchmaking\QueueInfo.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Matchmaking\SearchingForMatchNotification.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Messaging\StoreAccountBalanceNotification.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Messaging\StoreFulfillmentNotification.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Reroll\Pojo\AramPlayerParticipant.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Reroll\Pojo\EogPointChangeBreakdown.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Reroll\Pojo\PointSummary.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\AggregatedStat.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\AggregatedStats.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\AggregatedStatsKey.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\ChampionStatInfo.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\EndOfGameStats.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\FellowPlayerInfo.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\LeaverPenaltyStats.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\PlayerGameStats.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\PlayerLifetimeStats.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\PlayerParticipantStatsSummary.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\PlayerStats.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\PlayerStatSummaries.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\PlayerStatSummary.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\RawStat.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\RawStatDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\RecentGames.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\SummaryAggStat.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\SummaryAggStats.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\Team\TeamAggregatedStatsDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\Team\TeamPlayerAggregatedStatsDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Statistics\TimeTrackedStat.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\AllSummonerData.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\BasePublicSummonerDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Boost\SummonerActiveBoostsDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Icon\SummonerIconInventoryDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Masterybook\MasteryBookDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Masterybook\MasteryBookPageDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Masterybook\TalentEntry.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\PublicSummoner.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\RuneSlot.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Runes\AllPublicSummonerDataDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Runes\SummonerRune.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Runes\SummonerRuneInventory.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Spellbook\SlotEntry.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Spellbook\SpellBookDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Spellbook\SpellBookPageDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Summoner.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\SummonerCatalog.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\SummonerDefaultSpells.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\SummonerLevel.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\SummonerLevelAndPoints.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\SummonerTalentsAndPoints.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\Talent.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\TalentGroup.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Summoner\TalentRow.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Platform\Systemstate\ClientSystemStatesNotification.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\RiotGamesObject.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\SummonerNames.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\CreatedTeam.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\Dto\PlayerDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\Dto\RosterDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\Dto\TeamDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\Dto\TeamMemberInfoDTO.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\Stats\MatchHistorySummary.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\Stats\TeamStatDetail.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\Stats\TeamStatSummary.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\TeamId.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\Team\TeamInfo.cs" />
+    <Compile Include="PvPNetClient\RiotObjects\UnclassedObject.cs" />
+    <Compile Include="PvPNetClient\RTMP\ClassDefinition.cs" />
+    <Compile Include="PvPNetClient\RTMP\LoLConnection.cs" />
+    <Compile Include="PvPNetClient\RTMP\Packet.cs" />
+    <Compile Include="PvPNetClient\RTMP\PublicMethods.cs" />
+    <Compile Include="PvPNetClient\RTMP\Region.cs" />
+    <Compile Include="PvPNetClient\RTMP\RTMPSDecoder.cs" />
+    <Compile Include="PvPNetClient\RTMP\RTMPSEncoder.cs" />
+    <Compile Include="PvPNetClient\RTMP\TypedObject.cs" />
+    <Compile Include="ezBot.cs" />
+    <Compile Include="Utils\Generator.cs" />
+    <Compile Include="Utils\Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
